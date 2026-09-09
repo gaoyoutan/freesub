@@ -42,35 +42,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: laoye.in-gect.fun
+      Host: 89.36.161.222
 - name: 🇱🇻 LV 04 - xiaohe
-  type: vless
-  server: laoye.in-gect.fun
-  port: 2096
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  udp: true
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: laoye.in-gect.fun
-- name: 🇱🇻 LV 05 - xiaohe
-  type: vless
-  server: 172.67.67.178
-  port: 443
-  uuid: aebe5a70-0ca3-46ce-8208-8b5bab1346ce
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: rAyAn-007.nAsTaRaN.DpDnS.OrG
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: rayan-007.nastaran.dpdns.org
-- name: 🇱🇻 LV 06 - xiaohe
   type: vless
   server: 89.36.161.222
   port: 2096
@@ -82,8 +55,8 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 89.36.161.222
-- name: 🇱🇻 LV 07 - xiaohe
+      Host: laoye.in-gect.fun
+- name: 🇱🇻 LV 05 - xiaohe
   type: vless
   server: 89.36.161.222
   port: 2096
@@ -106,8 +79,6 @@ proxy-groups:
   - 🇱🇻 LV 03 - xiaohe
   - 🇱🇻 LV 04 - xiaohe
   - 🇱🇻 LV 05 - xiaohe
-  - 🇱🇻 LV 06 - xiaohe
-  - 🇱🇻 LV 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -118,7 +89,5 @@ proxy-groups:
   - 🇱🇻 LV 03 - xiaohe
   - 🇱🇻 LV 04 - xiaohe
   - 🇱🇻 LV 05 - xiaohe
-  - 🇱🇻 LV 06 - xiaohe
-  - 🇱🇻 LV 07 - xiaohe
 rules:
 - MATCH,PROXIES
