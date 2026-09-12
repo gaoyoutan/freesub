@@ -8,14 +8,14 @@ proxies:
   type: vless
   server: 31.58.181.88
   port: 8443
-  uuid: d0da19f1-fb05-488e-99c2-262389b3537b
+  uuid: 863ce48d-6b5e-4682-b5d7-0c9b43895841
   udp: true
   tls: true
   skip-cert-verify: true
   reality-opts:
     public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
   servername: tradingview.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   type: vless
   server: uae.unixzone.us
