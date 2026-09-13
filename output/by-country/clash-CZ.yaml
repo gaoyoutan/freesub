@@ -6,8 +6,49 @@ log-level: info
 proxies:
 - name: 🇨🇿 CZ 01 - xiaohe
   type: vless
-  server: 108.162.198.178
-  port: 80
+  server: 162.159.24.131
+  port: 8880
+  uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560security=tls
+    headers:
+      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+- name: 🇨🇿 CZ 02 - xiaohe
+  type: vless
+  server: 104.17.147.22
+  port: 2053
+  uuid: 401d950d-4f5c-45c7-bf44-8b69acf35f6f
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: 7X70yyvt7EQOTx-iq9N3rjt1xN1jWKH9.aSDfsAfDSAF.WOrKerS.dev
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiU2RJd1dRWkd6IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcm94eWlwIiwicGFuZWxJUHMiOltdfQ==
+    headers:
+      Host: 7x70yyvt7eqotx-iq9n3rjt1xn1jwkh9.asdfsafdsaf.workers.dev
+- name: 🇨🇿 CZ 03 - xiaohe
+  type: vless
+  server: 172.67.214.106
+  port: 443
+  uuid: a8890c1b-3622-3106-c4be-d8671be32d2b
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: summer-meadow-af5b.woowoorrrkk.workers.dev
+  network: ws
+  ws-opts:
+    path: /sync
+    headers:
+      Host: summer-meadow-af5b.woowoorrrkk.workers.dev
+- name: 🇨🇿 CZ 04 - xiaohe
+  type: vless
+  server: 188.114.97.6
+  port: 2086
   uuid: 47fcef29-ab4e-4aa6-932b-d95a18f28a4e
   udp: true
   tls: false
@@ -16,18 +57,24 @@ proxies:
   ws-opts:
     path: /
     headers:
-      Host: 8nj2r.2k8t.f88.hh.vavava.kdns.fr
+      Host: zb1zi.s3nx.dyz.hh.vavava.kdns.fr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
+  - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 CZ 01 - xiaohe
+  - 🇨🇿 CZ 02 - xiaohe
+  - 🇨🇿 CZ 03 - xiaohe
+  - 🇨🇿 CZ 04 - xiaohe
 rules:
 - MATCH,PROXIES
