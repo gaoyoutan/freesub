@@ -5,6 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
+  type: ss
+  server: 82.47.186.18
+  port: 19290
+  cipher: aes-128-gcm
+  password: o2rw2hICwu1blrr_gZAl2Q
+  udp: true
+- name: 🇫🇮 FI 02 - xiaohe
   type: vless
   server: 212.104.128.45
   port: 443
@@ -18,13 +25,6 @@ proxies:
     path: /proxyip=us.xiabibi.cf
     headers:
       Host: xi.tbv.ccwu.cc
-- name: 🇫🇮 FI 02 - xiaohe
-  type: ss
-  server: 82.47.186.18
-  port: 19290
-  cipher: aes-128-gcm
-  password: o2rw2hICwu1blrr_gZAl2Q
-  udp: true
 proxy-groups:
 - name: PROXIES
   type: select
