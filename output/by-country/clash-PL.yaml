@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: t_ql5pn5MG1bkVQoteCXoKkSTzUzOs_yXMllmsyiqXY
   servername: www.cloudflare.com
-  client-fingerprint: ios
+  client-fingerprint: firefox
 - name: 🇵🇱 PL 02 - xiaohe
   type: vless
   server: 46.8.194.76
