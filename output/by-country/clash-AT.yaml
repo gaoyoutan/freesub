@@ -5,18 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇹 AT 01 - xiaohe
-  type: vless
-  server: g2.haxat.bestvbest.ir
-  port: 20610
-  uuid: 8ec5d86b-d895-477d-bc96-21fa01049f2f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: lcXIrYi2o8yXrYHR321qQ--5lqVT8a6TKbaGpYTq4CI
-  servername: cdn-apple.com
-  client-fingerprint: chrome
-- name: 🇦🇹 AT 02 - xiaohe
   type: ss
   server: 82.110.60.9
   port: 19999
@@ -29,13 +17,11 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇦🇹 AT 01 - xiaohe
-  - 🇦🇹 AT 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇦🇹 AT 01 - xiaohe
-  - 🇦🇹 AT 02 - xiaohe
 rules:
 - MATCH,PROXIES
