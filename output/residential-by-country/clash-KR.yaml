@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+  type: vless
+  server: 104.17.64.70
+  port: 8880
+  uuid: f6e14309-5cff-4f5d-bce1-06a260159bbe
+  udp: true
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: steep-bread-32f0.92-d12.workers.dev
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.google.com/generate_204
+  interval: 300
+  proxies:
+  - 🇰🇷 韩国 (South Korea) 01 (家宽) - xiaohe
+rules:
+- MATCH,PROXIES
