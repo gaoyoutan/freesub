@@ -6,39 +6,19 @@ log-level: info
 proxies:
 - name: 🇫🇮 FI 01 - xiaohe
   type: vless
-  server: 77.42.20.51
-  port: 1085
-  uuid: 0c1b7949-fe09-43d9-863f-2c031f66bfc1
-  udp: true
-  tls: false
-  skip-cert-verify: true
-- name: 🇫🇮 FI 02 - xiaohe
-  type: vless
-  server: 84.22.150.39
-  port: 7443
-  uuid: 9d5cbb90-876b-448d-9874-27ab35bae6e7
+  server: 146.185.143.174
+  port: 443
+  uuid: 22fa3629-21b7-4904-b800-db850decb620
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
+  servername: fin.vip98.cfd
   network: ws
   ws-opts:
-    path: /@Marisa_kristi
+    path: /
     headers:
-      Host: woc0zvrf11w2endu.dphdlc1u77bs3y4kvussbuap4p576f1ws7igthq8zbf3.workers.dev
-- name: 🇫🇮 FI 03 - xiaohe
-  type: vless
-  server: 35.228.61.63
-  port: 443
-  uuid: 06e58eed-afc8-4cbf-a0bf-1b7b42e1a87f
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: wJwb5WExAnmGiq9mmjtMvoA8E-k10u5VvPegm9RomWU
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇫🇮 FI 04 - xiaohe
+      Host: fin.vip98.cfd
+- name: 🇫🇮 FI 02 - xiaohe
   type: vless
   server: 77.42.20.51
   port: 1085
@@ -53,8 +33,6 @@ proxy-groups:
   - AUTO
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
-  - 🇫🇮 FI 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -62,7 +40,5 @@ proxy-groups:
   proxies:
   - 🇫🇮 FI 01 - xiaohe
   - 🇫🇮 FI 02 - xiaohe
-  - 🇫🇮 FI 03 - xiaohe
-  - 🇫🇮 FI 04 - xiaohe
 rules:
 - MATCH,PROXIES
