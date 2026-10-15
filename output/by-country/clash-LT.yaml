@@ -15,7 +15,7 @@ proxies:
   reality-opts:
     public-key: MbRONgV8ADD5B_aKDBv15LAW2a8QZok5bkkZexRRVAs
   servername: b58e68t.lt1.h1clayd.click
-  client-fingerprint: firefox
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
