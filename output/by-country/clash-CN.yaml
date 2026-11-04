@@ -4,31 +4,31 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🇲🇾 MY 01 - xiaohe
+- name: 🇨🇳 CN 01 - xiaohe
   type: vless
-  server: 216.173.67.59
+  server: 8.35.211.242
   port: 443
-  uuid: d342d11e-d224-4463-b982-532309285094
+  uuid: fc7d2cfe-f5ef-40c8-a848-a0bdc11f6349
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ccc.010304.xyz
+  servername: vpn.cintaku.qzz.io
   network: ws
   ws-opts:
-    path: /fp=chrome
+    path: /vlessws
     headers:
-      Host: ccc.010304.xyz
+      Host: vpn.cintaku.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🇲🇾 MY 01 - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
-  - 🇲🇾 MY 01 - xiaohe
+  - 🇨🇳 CN 01 - xiaohe
 rules:
 - MATCH,PROXIES
