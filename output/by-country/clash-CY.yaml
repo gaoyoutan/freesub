@@ -6,6 +6,20 @@ log-level: info
 proxies:
 - name: 🇨🇾 CY 01 - xiaohe
   type: vless
+  server: 5.253.30.226
+  port: 443
+  uuid: 99c5b713-dedf-4a10-8070-916ff3f49b0e
+  udp: true
+  tls: true
+  skip-cert-verify: true
+  servername: fs.qicai99.com
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: fs.qicai99.com
+- name: 🇨🇾 CY 02 - xiaohe
+  type: vless
   server: 45.86.60.174
   port: 16443
   uuid: 13e541f3-d09d-4633-89df-8513db0ced20
@@ -18,11 +32,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇾 CY 01 - xiaohe
+  - 🇨🇾 CY 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇾 CY 01 - xiaohe
+  - 🇨🇾 CY 02 - xiaohe
 rules:
 - MATCH,PROXIES
