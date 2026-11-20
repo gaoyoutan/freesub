@@ -19,18 +19,17 @@ proxies:
       Host: 45.144.234.157
 - name: 🇫🇮 FI 02 - xiaohe
   type: vless
-  server: 104.18.63.135
-  port: 2083
-  uuid: a6ad7987-f17e-41fa-a752-72db9a725eb2
+  server: 45.144.234.157
+  port: 14430
+  uuid: 59b0d30e-9b29-4fda-a35c-b2901ec32db7
   udp: true
-  tls: true
+  tls: false
   skip-cert-verify: true
-  servername: vipfree.dr-ping.ir
   network: ws
   ws-opts:
-    path: /
+    path: /vless
     headers:
-      Host: vipfree.dr-ping.ir
+      Host: 45.144.234.157
 - name: 🇫🇮 FI 03 - xiaohe
   type: vless
   server: 45.144.234.157
