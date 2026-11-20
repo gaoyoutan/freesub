@@ -11,33 +11,17 @@ proxies:
   cipher: chacha20-ietf-poly1305
   password: 2Ef8X21WALqK7H6N8A78j5WYtzZ999PP8rF8DaLsb5LLyDLQpf5dGVAjdA3mj1wudigKXTt5heYU9jmaBbfxXBJJAqhPHkxe
   udp: true
-- name: 🇨🇿 CZ 02 - xiaohe
-  type: vless
-  server: 188.114.97.3
-  port: 443
-  uuid: bc02ab8e-0de0-47e7-b2d0-a5b4737c6dab
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: VpNMofTi.SEtGUW.wORkeRS.DEV
-  network: ws
-  ws-opts:
-    path: /vl/D8a5qKgqnMZ63qXsI?ed=2560
-    headers:
-      Host: vpnmofti.setguw.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇨🇿 CZ 01 - xiaohe
-  - 🇨🇿 CZ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 CZ 01 - xiaohe
-  - 🇨🇿 CZ 02 - xiaohe
 rules:
 - MATCH,PROXIES
