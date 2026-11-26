@@ -25,27 +25,19 @@ proxies:
     headers:
       Host: 5.178.109.174
 - name: 🇸🇪 SE 03 - xiaohe
-  type: vmess
-  server: 138.199.55.230
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
+  type: vless
+  server: 13.140.95.76
+  port: 2087
+  uuid: b69cf773-da16-486e-afce-a45b94f998b3
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: ''
-- name: 🇸🇪 SE 04 - xiaohe
-  type: vmess
-  server: 62.93.166.184
-  port: 1270
-  uuid: 5c040f1d-45db-43bd-8d46-e4950e433735
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: xmfhlpy.com
+  servername: senflarelink-node-6b9.pages.dev
+  network: ws
+  ws-opts:
+    path: /flow=
+    headers:
+      Host: senflarelink-node-6b9.pages.dev
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,7 +46,6 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -63,6 +54,5 @@ proxy-groups:
   - 🇸🇪 SE 01 - xiaohe
   - 🇸🇪 SE 02 - xiaohe
   - 🇸🇪 SE 03 - xiaohe
-  - 🇸🇪 SE 04 - xiaohe
 rules:
 - MATCH,PROXIES
